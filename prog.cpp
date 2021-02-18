@@ -18,15 +18,30 @@ using namespace std;
 //	return a + b;
 //}
 
-unsigned int fact(unsigned int x)
+//unsigned int fact(unsigned int x)
+//{
+//	if (x == 1)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return x * fact(x - 1);
+//	}
+//}
+
+void hanoi(int n, char ta, char tb, char tc)
 {
-	if (x == 1)
+	static int row = 1;
+	if (n == 1)
 	{
-		return 1;
+		cout << row++ <<"- move from " << ta << " to " << tb << endl;
 	}
 	else
 	{
-		return x * fact(x - 1);
+		hanoi(n - 1, ta, tc, tb);
+		cout << row++ << "- move from " << ta << " to " << tb << endl;
+		hanoi(n - 1, tc, tb, ta);
 	}
 }
 
@@ -39,10 +54,12 @@ int main()
 	//z = add(x, y);
 	//cout << z << endl;
 
-	unsigned int v;
-	v = fact(4);
+	//unsigned int v;
+	//v = fact(4);
 
-	cout << v << endl;
+	//cout << v << endl;
+
+	hanoi(4, 'A', 'B', 'C');
 
 	return 0;
 
