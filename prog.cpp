@@ -30,20 +30,21 @@ using namespace std;
 //	}
 //}
 
-void hanoi(int n, char ta, char tb, char tc)
-{
-	static int row = 1;
-	if (n == 1)
-	{
-		cout << row++ <<"- move from " << ta << " to " << tb << endl;
-	}
-	else
-	{
-		hanoi(n - 1, ta, tc, tb);
-		cout << row++ << "- move from " << ta << " to " << tb << endl;
-		hanoi(n - 1, tc, tb, ta);
-	}
-}
+//void hanoi(int n, char ta, char tb, char tc)
+//{
+//	static int row = 1;
+//	if (n == 1)
+//	{
+//		cout << row++ <<"- move from " << ta << " to " << tb << endl;
+//	}
+//	else
+//	{
+//		hanoi(n - 1, ta, tc, tb);
+//		cout << row++ << "- move from " << ta << " to " << tb << endl;
+//		hanoi(n - 1, tc, tb, ta);
+//	}
+//}
+
 
 int main()
 {
