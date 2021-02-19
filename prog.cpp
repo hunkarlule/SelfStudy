@@ -2,9 +2,13 @@
 #include <iostream>
 using namespace std;
 
-//int add(int a, int b)
+int add(int a, int b)
+{
+	return a + b;
+}
+//void foo()
 //{
-//	return a + b;
+//	add(1, 20);
 //}
 
 //auto add(int a, int b) -> int
@@ -45,7 +49,10 @@ using namespace std;
 //	}
 //}
 
-
+int dvd(int a, int b)
+{
+	return a / b;
+}
 int main()
 {
 	//int x = 10;
@@ -54,13 +61,27 @@ int main()
 
 	//z = add(x, y);
 	//cout << z << endl;
+	//cout << unsigned int(&z) << endl;
+	//cout << unsigned int(add) << endl;
 
 	//unsigned int v;
 	//v = fact(4);
 
 	//cout << v << endl;
 
-	hanoi(4, 'A', 'B', 'C');
+	//hanoi(4, 'A', 'B', 'C');
+
+	//foo();
+
+	int v;
+	int (*funcPtr)(int, int);
+	funcPtr = add;
+	v = funcPtr(3, 4);
+	cout << v << endl;
+
+	funcPtr = dvd;
+	v = funcPtr(4, 2);
+	cout << v << endl;
 
 	return 0;
 
