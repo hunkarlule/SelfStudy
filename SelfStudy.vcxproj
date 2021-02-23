@@ -140,9 +140,11 @@
   <ItemGroup>
     <ClCompile Include="Int.cpp" />
     <ClCompile Include="prog.cpp" />
+    <ClCompile Include="Validation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Int.h" />
+    <ClInclude Include="Validation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -61,6 +61,25 @@ bool validMark(int val, string& errorMessage)
 	return res;
 }
 
+class Foo
+{
+
+	char m_sep;
+
+public:
+	Foo(char s) : m_sep(s)
+	{
+	}
+	void operator() (int num)
+	{
+		int i = 0;
+		for (i = 0; i < num; i++)
+		{
+			cout << i << m_sep; 
+		}
+		cout << endl;
+	}
+};
 
 int main()
 {
@@ -73,7 +92,7 @@ int main()
 	//	func[i](10, 2);
 	//}
 
-	Int val(0, validAge);
+	/*Int val(0, validAge);
 	cout << "Age please: ";
 	cin >> val;
 	cout << val << " is a valid age" << endl;
@@ -81,7 +100,24 @@ int main()
 	val.set(validMark);
 	cout << "Mark please: ";
 	cin >> val;
-	cout << val << " is a valid mark" << endl;
+	cout << val << " is a valid mark" << endl;*/
+
+	Foo f('-');
+	
+	f(5);
+	// f.operator()(5); // this is same thing as f(5)
+
+	auto loop = [](int num)
+	{
+		int i = 0;
+		for (i = 0; i < num; i++)
+		{
+			cout << i << " ";
+		}
+		cout << endl;
+	};
+
+	loop(5);
 
 	return 0;
 }
